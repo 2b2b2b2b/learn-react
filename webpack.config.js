@@ -5,6 +5,7 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, 'app/index.jsx'),
+    devtool:'inlne-souce-map',
     output: {
         filename: "bundle.js"
     },
