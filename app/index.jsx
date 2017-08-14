@@ -1,8 +1,12 @@
-import React from 'react'
-import { render } from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { hasHistory } from 'react-router';
+import RouterMap from './router/routerMap'
 
-import './static/css/common.less'
-import Todo from './containers/Todo/index.jsx'
+//静态
+import './static/css/common.less';
+import './static/css/font.css';
 
 render(
     <Todo/>,
