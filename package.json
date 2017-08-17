@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=dev && webpack-dev-server --progress --colors",
-    "build": "rd/s/q ./build && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --colors"
+    "start": "NODE_ENV=dev webpack-dev-server --progress --colors",
+    "mock": "node --harmony ./mock/server.js",
+    "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --colors"
   },
   "author": "",
   "license": "ISC",
@@ -36,10 +37,17 @@
     "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
-    "react": "^15.3.1",
+    "es6-promise": "^3.2.1",
+    "immutable": "^3.8.1",
+    "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.3.1",
+    "react-addons-pure-render-mixin": "^15.3.1",
     "react-dom": "^15.3.1",
-    "react-redux": "^5.0.6",
-    "react-router": "^4.1.2",
-    "redux": "^3.7.2"
+    "react-redux": "^4.4.5",
+    "react-router": "^2.7.0",
+    "react-swipe": "^5.0.5",
+    "redux": "^3.5.2",
+    "swipe-js-iso": "^2.0.3",
+    "whatwg-fetch": "^1.0.0"
   }
 }
